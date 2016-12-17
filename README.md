@@ -17,7 +17,7 @@ Many additional directories can be found at `/usr/share/hunspell`.
 List all languages available:
 
 ```bash
-docker run -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest ls /usr/share/hunspell
+docker run -ti tmaier/markdown-spellcheck:latest hunspell -D
 ```
 
 ```bash
