@@ -7,7 +7,7 @@ See https://github.com/lukeapage/node-markdown-spellcheck
 The working directory is at `/workdir`. Mount your volume into that directory.
 
 ```bash
-$ docker run -ti -v $(pwd):/workdir tmaier/spell:dev "**/*.md"
+$ docker run -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest "**/*.md"
 ```
 
 ## Other languages
@@ -17,11 +17,11 @@ Many additional directories can be found at `/usr/share/hunspell`.
 List all languages available:
 
 ```bash
-docker run -ti -v $(pwd):/workdir tmaier/spell:dev ls /usr/share/hunspell
+docker run -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest ls /usr/share/hunspell
 ```
 
 ```bash
-$ docker run -ti -v $(pwd):/workdir tmaier/spell:dev --dictionary /usr/share/hunspell/de_DE_comb "**/*.md"
+$ docker run -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --dictionary /usr/share/hunspell/de_DE_comb "**/*.md"
 ```
 
 ## Continuous Integration (CI)
@@ -29,7 +29,7 @@ $ docker run -ti -v $(pwd):/workdir tmaier/spell:dev --dictionary /usr/share/hun
 Run in report mode
 
 ```bash
-$ docker run -ti -v $(pwd):/workdir tmaier/spell:dev --report "**/*.md"
+$ docker run -ti -v $(pwd):/workdir tmaier/markdown-spellcheck:latest --report "**/*.md"
 ```
 
 ## Author
