@@ -1,4 +1,4 @@
-FROM node:7-alpine
+FROM node:15-alpine
 MAINTAINER Tobias L. Maier <tobias.maier@baucloud.com>
 
 ARG HUNSPELL_BASE_URL="http://download.services.openoffice.org/contrib/dictionaries"
